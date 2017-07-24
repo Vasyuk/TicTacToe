@@ -18,44 +18,55 @@ class Player
 end
 
 class BoardCase
-  :bZ
+  attr_accessor :bZ
 end
 
 class Board
   @@case1 = BoardCase.new
+    @@case1.bZ = " "
   @@case2 = BoardCase.new
+    @@case2.bZ = " "
   @@case3 = BoardCase.new
+    @@case3.bZ = " "
   @@case4 = BoardCase.new
+    @@case4.bZ = " "
   @@case5 = BoardCase.new
+    @@case5.bZ = " "
   @@case6 = BoardCase.new
+    @@case6.bZ = " "
   @@case7 = BoardCase.new
+    @@case7.bZ = " "
   @@case8 = BoardCase.new
+    @@case8.bZ = " "
   @@case9 = BoardCase.new
+    @@case9.bZ = " "
   def initBoard(name,bZe)
-
-    if name == 1
+    if name == "1"
       @@case1.bZ = bZe
-      puts  @@case1.bZ.to_s
-    elsif name == 2
+    elsif name == "2"
       @@case2.bZ = bZe
-    elsif name == 3
+    elsif name == "3"
       @@case3.bZ = bZe
-    elsif name == 4
+    elsif name == "4"
       @@case4.bZ = bZe
-    elsif name == 5
+    elsif name == "5"
       @@case5.bZ = bZe
-    elsif name == 6
+    elsif name == "6"
       @@case6.bZ = bZe
-    elsif name == 7
+    elsif name == "7"
       @@case7.bZ = bZe
-    elsif name == 8
+    elsif name == "8"
       @@case8.bZ = bZe
-    elsif name == 9
+    elsif name == "9"
       @@case9.bZ = bZe
     end
   end
   def showBoard
-
+      puts @@case1.bZ + " | " +  @@case2.bZ + " | " +  @@case3.bZ
+      puts "----------"
+      puts @@case4.bZ + " | " +  @@case5.bZ + " | " +  @@case6.bZ
+      puts "----------"
+      puts @@case7.bZ + " | " +  @@case8.bZ + " | "+  @@case9.bZ
   end
 end
 
@@ -88,14 +99,16 @@ class Game
   end
 
   def gamee
-    puts @@player1.name + " chooses where he wants to put " + @@player1.daggerZero + " 1 - 9"
-    digit = gets.chomp
-    @@board.initBoard(digit, @@player1.daggerZero)
-    @@board.showBoard
-    puts @@player2.name + " chooses where he wants to put " + @@player2.daggerZero + " 1 - 9"
-    digit = gets.chomp
-    @@board.initBoard(digit, @@player2.daggerZero)
-    @@board.showBoard
+    for n in (0..4)
+      puts @@player1.name + " chooses where he wants to put " + @@player1.daggerZero + " 1 - 9"
+      digit = gets.chomp
+      @@board.initBoard(digit, @@player1.daggerZero)
+      @@board.showBoard
+      puts @@player2.name + " chooses where he wants to put " + @@player2.daggerZero + " 1 - 9"
+      digit = gets.chomp
+      @@board.initBoard(digit, @@player2.daggerZero)
+      @@board.showBoard
+    end
   end
 end
 
