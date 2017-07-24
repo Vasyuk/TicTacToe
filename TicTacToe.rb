@@ -71,6 +71,27 @@ class Board
 end
 
 
+# class FindWinner
+#     win = false
+#   if @@case1.bZ == @@case2.bZ || @@case2.bZ  == @@case3.bZ
+#     win = true
+#   # elsif @@case4.bZ == @@case5.bZ == @@case6.bZ
+#   #   return true
+#   # elsif @@case7.bZ == @@case8.bZ == @@case9.bZ
+#   #   return true
+#   # elsif @@case1.bZ == @@case4.bZ == @@case7.bZ
+#   #   return true
+#   # elsif @@case2.bZ == @@case5.bZ == @@case8.bZ
+#   #   return true
+#   # elsif @@case3.bZ == @@case6.bZ == @@case9.bZ
+#   #   return true
+#   # elsif @@case1.bZ == @@case5.bZ == @@case9.bZ
+#   #   return true
+#   # elsif @@case3.bZ == @@case5.bZ == @@case7.bZ
+#   #   return true
+#   end
+#   return win
+# end
 
 class Game
   @@player1 = Player.new
