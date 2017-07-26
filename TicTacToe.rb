@@ -11,7 +11,7 @@ class Player
   def verificationDaggerZero(nameVer)
     while !(nameVer == "X" || nameVer == "O")
       puts "You have to write X or O"
-      nameVer = gets.chomp
+      nameVer = gets.chomp.upcase
     end
     return nameVer
   end
@@ -114,7 +114,7 @@ class Game
     namePl = gets.chomp
     @@player2.name = @@player1.verificationName(namePl)
 
-    puts @@player1.name + " wonts to play with CROSSES or with ZERO? X/O"
+    puts @@player1.name + " wants to play with CROSSES or with ZERO? X/O"
     daggerZero = gets.chomp
     @@player1.daggerZero = @@player1.verificationDaggerZero(daggerZero.upcase)
     @@player1.daggerZero
